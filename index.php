@@ -21,5 +21,4 @@ $resp = array();
 $resp['success'] = $success;
 $resp['error'] = $error;
 echo json_encode($resp);
-
 ?>
