@@ -10,6 +10,7 @@ session_start();
 <head>
 	<meta charset="utf-8">
 	<title>dev.heroku.stripe.checkout</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
 	<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 </head>
 <body>
@@ -55,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		try {
 			
 			// Include the Stripe library:
-			require_once('stripe/Stripe.php');
+			require_once('https://dev-heroku-stripe-checkout.herokuapp.com/stripe/Stripe.php');
 
 			// set your secret key: remember to change this to your live secret key in production
 			// see your keys here https://manage.stripe.com/account
@@ -104,7 +105,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 	<h1>dev.heroku.stripe.checkout</h1>
 
-	<form action="checkout.php" method="POST" id="payment-form">
+	<form action="https://dev-heroku-stripe-checkout.herokuapp.com/checkout.php" method="POST" id="payment-form">
 
 		<?php // Show PHP errors, if they exist:
 		if (isset($errors) && !empty($errors) && is_array($errors)) {
@@ -135,7 +136,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 	</form>
 
-	<script src="checkout.js"></script>
+	<script src="https://dev-heroku-stripe-checkout.herokuapp.com/checkout.js"></script>
 
 </body>
 </html>
