@@ -1,20 +1,6 @@
-<?php # buy.php 
-// Created by Larry Ullman, www.larryullman.com, @LarryUllman
-// Posted as part of the series "Processing Payments with Stripe"
-// http://www.larryullman.com/series/processing-payments-with-stripe/
-// Last updated February 20, 2013
-// The class names are based upon Twitter Bootstrap (http://twitter.github.com/bootstrap/)
-
-// This page is used to make a purchase.
-
-// Every page needs the configuration file:
-//define('FILE_PATH', __FILE__);
-//require(__FILE__'/'+'config.inc.php');
-//require('/home/content/c/n/t/cntm6088/html/checkout/config.inc.php');
-//require('includes/config.inc.php');
-
-require('/config.inc.php');
-
+<?php
+define('STRIPE_PRIVATE_KEY', 'sk_test_udw56z4V1NbZNOdNWDrDNfdK');
+define('STRIPE_PUBLIC_KEY', 'pk_test_WJ5z2yZl5ELiyNlhJ1swpxoT');
 
 // Uses sessions to test for duplicate submissions:
 session_start();
@@ -23,10 +9,12 @@ session_start();
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Buy This Thing</title>
+	<title>dev.heroku.stripe.checkout</title>
 	<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 </head>
-<body><?php 
+<body>
+<p>dev.heroku.stripe.checkout</p>
+<?php 
 
 // Set the Stripe key:
 // Uses STRIPE_PUBLIC_KEY from the config file.
