@@ -102,9 +102,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 ?>
 
-	<h1>Buy This Thing</h1>
+	<h1>dev.heroku.stripe.checkout</h1>
 
-	<form action="buy.php" method="POST" id="payment-form">
+	<form action="checkout.php" method="POST" id="payment-form">
 
 		<?php // Show PHP errors, if they exist:
 		if (isset($errors) && !empty($errors) && is_array($errors)) {
