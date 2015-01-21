@@ -9,7 +9,7 @@ $token = $_POST['stripeToken'];
 // Create the charge on Stripe's servers - this will charge the user's card
 try {
 $charge = Stripe_Charge::create(array(
-  "amount" => 1000, // amount in cents, again
+  "amount" => 2000, // amount in cents, again
   "currency" => "usd",
   "card" => $token,
   "description" => "payinguser@example.com")
